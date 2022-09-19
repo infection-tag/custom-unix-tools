@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 	if(strcmp(directory, ".") == true) {
 		system("pwd >> __meta_path");
 		fopen(pathfile, "r");
-		for(int i = 0, char c;; c != EOF; c = fgetc(pathfile) && i++) {
+		for(int i = 0;; c != EOF; c = fgetc(pathfile) && i++) {
 			directory[i] = c;
 		}
 	}
