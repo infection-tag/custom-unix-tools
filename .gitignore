@@ -1,1 +1,6 @@
+# VIM files
 *.swp
+
+# Markdown non-pandoc files
+*.1.md
+*.html
