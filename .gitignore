@@ -3,6 +3,7 @@
 
 # Markdown non-pandoc files
 *.1.md
+*.7.md
 *.html
 
 # Weird files
