@@ -1,19 +1,24 @@
 mkdir ~/.custom # move all this stuff to .custom folder
 cp -R . ~/.custom # move all source files to .custom
 
-if [ -n "$ZSH_VERSION" ]; then
-	# user is using zsh
-	echo "alias meta="sh ~/.custom/meta.sh"" >> ~/.zshrc
-	echo "alias new-git="sh ~/.custom/new-git.sh"" >> ~/.zshrc
-	echo export $MANPATH="$MANPATH:/usr/local/man" >> ~/.zshrc
+if [ -n "$CUSTOMINIT" ]; then
 
-elif [ -n "$BASH_VERSION" ]; then
-	# user is using bash
-	echo "alias meta="sh meta.sh"" >> ~/.bashrc
-	echo "alias new-git="sh new-git.sh"" >> ~/.bashrc
-	echo export $MANPATH="$MANPATH:/usr/local/custom-man-pages" >> ~/.bashrc
+else
+	if [ -n "$ZSH_VERSION" ]; then
+		# user is using zsh
+		export $CUSTOMINIT=true
+		echo "alias meta="sh ~/.custom/meta.sh"" >> ~/.zshrc
+		echo "alias new-git="sh ~/.custom/new-git.sh"" >> ~/.zshrc
+		echo export $MANPATH="$MANPATH:/usr/local/man" >> ~/.zshrc
 
-fi;
+	elif [ -n "$BASH_VERSION" ]; then
+		# user is using bash
+		export $CUSTOMINIT=true
+		echo "alias meta="sh meta.sh"" >> ~/.bashrc
+		echo "alias new-git="sh new-git.sh"" >> ~/.bashrc
+		echo export $MANPATH="$MANPATH:/usr/local/custom-man-pages" >> ~/.bashrc
+
+	fi;
 
 # make a directory for custom-man-pages
 cp -R ../custom-man-pages /usr/local/
