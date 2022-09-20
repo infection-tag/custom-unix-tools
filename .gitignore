@@ -4,3 +4,7 @@
 # Markdown non-pandoc files
 *.1.md
 *.html
+
+# Weird files
+.DS_*
+
