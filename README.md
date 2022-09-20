@@ -29,4 +29,14 @@ new-git intializes your current desktop folder to be set up for git.
 
 To learn more about the commands you may find, you can simply use `man` (which comes with your command line) to find out about a certain command.
 
+## Setup
+
+To setup, simply open your terminal and type:
+
+```sh
+cd ~
+git clone https://github.com/infection-tag/custom-unix-tools
+sudo sh custom-unix/src/setup.sh
+```
+
 
