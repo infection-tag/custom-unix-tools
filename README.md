@@ -36,7 +36,7 @@ To setup, simply open your terminal and type:
 ```sh
 cd ~
 git clone https://github.com/infection-tag/custom-unix-tools
-sudo sh custom-unix/src/setup.sh
+sudo sh custom-unix-tools/src/setup.sh
 ```
 
 
